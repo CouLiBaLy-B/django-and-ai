@@ -1,5 +1,5 @@
 assemblyai==0.25.0
-Django==5.0.4
+Django
 langchain==0.1.16
 langchain-community==0.0.33
 pytube==15.0.0
