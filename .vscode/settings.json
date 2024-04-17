@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "www.biodiv-sports.fr",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "username": "consultation",
+            "database": "geotrek",
+            "password": "VaeKa9uuM7Eem,oh",
+            "name": "lpo"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blog Posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div>
+            <a href=".">
+                <h1 class="text-3xl font-bold"> AI Blog Generator</h1>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="text-black hover:underline"> Welcome {{user.username}}</a>
+            <a href="logout" class="text-white hover:underline"> Logout</a>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <!-- Main Content Container-->
+    <div class="container mx-auto mt-10 sm:px-0">
+        <div>
+
+            <!-- Blog post section-->
+            <section>
+                <h2 class="text-xl mb-4 font-semibold">
+                    All Blog posts
+                </h2>
+                <div class="space-y-4">
+                    {% for articule in blog_articules  reversed %}
+                    <a href='blog-details/{{articule.id}}'>
+                        <div class="border border-gray-300 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold"> {{articule.youtube_title}}</h3>
+                            <p>{{articule.generated_content |truncatechars:80}}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                    <!--Repeat-->
+                </div>
+            </section>
+        </div>
+    </div>
+    
+</body>
+</html>
