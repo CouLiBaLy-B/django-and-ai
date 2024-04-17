@@ -3,7 +3,3 @@ Django==5.0.4
 langchain==0.1.16
 langchain_community==0.0.33
 pytube==15.0.0
-
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
