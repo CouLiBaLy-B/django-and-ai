@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('youtube_title', models.CharField(max_length=300)),
                 ('youtube_link', models.URLField()),
-                ('generated_content', models.CharField()),
+                ('generated_content', models.CharField(max_length=1024)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],

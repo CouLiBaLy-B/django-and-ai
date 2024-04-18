@@ -9,6 +9,7 @@ from .models import BlogPost
 from pytube import YouTube
 import json
 import os
+import shutil
 import assemblyai as aai
 from langchain_community.llms import HuggingFaceHub
 from langchain.prompts import PromptTemplate
@@ -48,6 +49,7 @@ def generate_blog(request):
                                                     generated_content=blog_content
                                                     )
         new_blog_articule.save()
+        delete_mp3_file()
         # return blog artcile as a response
         return JsonResponse({'content': blog_content})
     else:
@@ -101,6 +103,16 @@ def download_audio(link):
     new_file = base + '.mp3'
     os.rename(out_file, new_file)
     return new_file
+
+
+def delete_mp3_file():
+    try:
+        shutil.rmtree(settings.MEDIA_ROOT)
+    except OSError as e:
+        return JsonResponse({'error': f"{settings.MEDIA_ROOT} doesn't exist {e}"},
+                            status=500)
+
+    os.makedirs(settings.MEDIA_ROOT)
 
 
 def blog_details(request, pk):

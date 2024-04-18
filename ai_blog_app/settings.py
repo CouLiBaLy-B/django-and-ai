@@ -76,24 +76,24 @@ WSGI_APPLICATION = 'ai_blog_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-# 78dd0cf5-ad39-435d-ae95-fd84abc7135f-1
-# qoveryadmin:41cPfD-cZn-Wjb2xHPbU2tolQqOkbbKt@z2a6226c5-postgresql.czmgtrr6l4ym.us-east-2.rds.amazonaws.com:5432
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': "qoveryadmin",
-        "PASSWORD": "oN55-tsDd87xVfAjm3oMpDBpCF3MOFxO",
-        "PORT": "5432",
-        "HOST": "za9b52ede-postgresql.czmgtrr6l4ym.us-east-2.rds.amazonaws.com"
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+# 78dd0cf5-ad39-435d-ae95-fd84abc7135f-1
+# qoveryadmin:41cPfD-cZn-Wjb2xHPbU2tolQqOkbbKt@z2a6226c5-postgresql.czmgtrr6l4ym.us-east-2.rds.amazonaws.com:5432
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': "qoveryadmin",
+#         "PASSWORD": "oN55-tsDd87xVfAjm3oMpDBpCF3MOFxO",
+#         "PORT": "5432",
+#         "HOST": "za9b52ede-postgresql.czmgtrr6l4ym.us-east-2.rds.amazonaws.com"
+#         }
+# }
 
 
 # Password validation
